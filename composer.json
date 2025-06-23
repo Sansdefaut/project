@@ -1,0 +1,6 @@
+{
+    "require": {
+        "twilio/sdk": "^8.6",
+        "tecnickcom/tcpdf": "^6.10"
+    }
+}

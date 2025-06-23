@@ -1,0 +1,876 @@
+2025-06-22 12:21:43 - SMS to 250789934421 - Result: 
+
+<!DOCTYPE html>
+<html>
+    <head>
+    
+
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="robots" content="NONE,NOARCHIVE" />
+        
+
+        <title>IntouchSMS WEB API</title>
+
+        
+        
+            <link rel="stylesheet" type="text/css" href="https://www.intouchsms.co.rw:9001/static/rest_framework/css/bootstrap.min.css"/>
+            <link rel="stylesheet" type="text/css" href="https://www.intouchsms.co.rw:9001/static/rest_framework/css/bootstrap-tweaks.css"/>
+        
+        <link rel="stylesheet" type="text/css" href="https://www.intouchsms.co.rw:9001/static/rest_framework/css/prettify.css"/>
+        <link rel="stylesheet" type="text/css" href="https://www.intouchsms.co.rw:9001/static/rest_framework/css/default.css"/>
+        
+
+    
+    </head>
+
+  <body class=" container">
+
+    <div class="wrapper">
+
+    
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <span href="/">
+                    <a class='brand' href='http://www.intouchsms.co.rw'>IntouchSMS WEB API <span class="version">1.0</span></a>
+                </span>
+                <ul class="nav pull-right">
+                    
+                        
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Sansdefaut
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href='/api/api-auth/logout/?next=/api/sendsms/'>Log out</a></li>
+                                </ul>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <ul class="breadcrumb">
+        
+            <li>
+                <a href="/api/" >Api Root</a> <span class="divider">&rsaquo;</span>
+            </li>
+        
+            <li>
+                <a href="/api/sendsms/" class="active">Send Sms</a> 
+            </li>
+        
+    </ul>
+    
+
+    <!-- Content -->
+    <div id="content">
+
+        
+            <form id="get-form" class="pull-right">
+                <fieldset>
+                    <div class="btn-group format-selection">
+                        <a class="btn btn-primary js-tooltip" href='/api/sendsms/' rel="nofollow" title="Make a GET request on the Send Sms resource">GET</a>
+
+                        <button class="btn btn-primary dropdown-toggle js-tooltip" data-toggle="dropdown" title="Specify a format for the GET request">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            
+                                <li>
+                                    <a class="js-tooltip format-option" href='/api/sendsms/?format=api' rel="nofollow" title="Make a GET request on the Send Sms resource with the format set to `api`">api</a>
+                                </li>
+                            
+                                <li>
+                                    <a class="js-tooltip format-option" href='/api/sendsms/?format=json' rel="nofollow" title="Make a GET request on the Send Sms resource with the format set to `json`">json</a>
+                                </li>
+                            
+                                <li>
+                                    <a class="js-tooltip format-option" href='/api/sendsms/?format=xml' rel="nofollow" title="Make a GET request on the Send Sms resource with the format set to `xml`">xml</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+
+                </fieldset>
+            </form>
+        
+
+        
+            <form class="button-form" action="/api/sendsms/" method="POST" class="pull-right">
+                <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='Qo0WcXzQEil3RWU8lj4KdYjHUAnFNtTH' /></div>
+                <input type="hidden" name="_method" value="OPTIONS" />
+                <button class="btn btn-primary js-tooltip" title="Make an OPTIONS request on the Send Sms resource">OPTIONS</button>
+            </form>
+        
+
+        
+
+        <div class="content-main">
+            <div class="page-header"><h1>Send Sms</h1></div>
+            
+            
+            
+            <div class="request-info" style="clear: both" >
+                <pre class="prettyprint"><b>POST</b> /api/sendsms/</pre>
+            </div>
+            <div class="response-info">
+                <pre class="prettyprint"><div class="meta nocode"><b>HTTP 200 OK</b>
+<b>Vary:</b> <span class="lit">Accept</span>
+<b>Content-Type:</b> <span class="lit">text/html; charset=utf-8</span>
+<b>Allow:</b> <span class="lit">GET, POST, HEAD, OPTIONS</span>
+
+</div>{
+    &quot;response&quot;: [
+        {
+            &quot;errors&quot;: {
+                &quot;action&quot;: &quot;Failed to Send Message.&quot;, 
+                &quot;error&quot;: &quot;Invalid sender name&quot;
+            }
+        }
+    ], 
+    &quot;success&quot;: false
+}</pre>
+            </div>
+        </div>
+
+            
+
+                
+                <div >
+                    
+                    <div class="well tab-content">
+                        
+                        <div  id="generic-content-form">
+                            
+                            <form action="/api/sendsms/" method="POST" class="form-horizontal">
+                                <fieldset>
+                                    
+<div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='Qo0WcXzQEil3RWU8lj4KdYjHUAnFNtTH' /></div>
+
+
+    <div class="control-group">
+        <label for="id__content_type" class="control-label">Media type</label>
+        <div class="controls">
+            <select name="_content_type" id="id__content_type">
+<option value="application/json" selected="selected">application/json</option>
+<option value="*/xml">*/xml</option>
+</select>
+            <span class="help-block"></span>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label for="id__content" class="control-label">Content</label>
+        <div class="controls">
+            <textarea id="id__content" rows="10" cols="40" name="_content">{
+    &quot;recipients&quot;: &quot;&quot;, 
+    &quot;sender&quot;: &quot;&quot;, 
+    &quot;message&quot;: &quot;&quot;
+}</textarea>
+            <span class="help-block"></span>
+        </div>
+    </div>
+
+
+                                    <div class="form-actions">
+                                        <button class="btn btn-primary" title="Make a POST request on the Send Sms resource">POST</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+
+                
+            
+
+        </div>
+        <!-- END content-main -->
+
+    </div>
+    <!-- END Content -->
+
+        <div id="push"></div>
+
+    </div>
+
+    </div><!-- ./wrapper -->
+
+    
+    
+
+    
+    <script src="https://www.intouchsms.co.rw:9001/static/rest_framework/js/jquery-1.8.1-min.js"></script>
+    <script src="https://www.intouchsms.co.rw:9001/static/rest_framework/js/bootstrap.min.js"></script>
+    <script src="https://www.intouchsms.co.rw:9001/static/rest_framework/js/prettify-min.js"></script>
+    <script src="https://www.intouchsms.co.rw:9001/static/rest_framework/js/default.js"></script>
+    
+  </body>
+</html>
+
+2025-06-22 12:37:45 - SMS to 250789934421 - Result: 
+
+<!DOCTYPE html>
+<html>
+    <head>
+    
+
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="robots" content="NONE,NOARCHIVE" />
+        
+
+        <title>IntouchSMS WEB API</title>
+
+        
+        
+            <link rel="stylesheet" type="text/css" href="https://www.intouchsms.co.rw:9001/static/rest_framework/css/bootstrap.min.css"/>
+            <link rel="stylesheet" type="text/css" href="https://www.intouchsms.co.rw:9001/static/rest_framework/css/bootstrap-tweaks.css"/>
+        
+        <link rel="stylesheet" type="text/css" href="https://www.intouchsms.co.rw:9001/static/rest_framework/css/prettify.css"/>
+        <link rel="stylesheet" type="text/css" href="https://www.intouchsms.co.rw:9001/static/rest_framework/css/default.css"/>
+        
+
+    
+    </head>
+
+  <body class=" container">
+
+    <div class="wrapper">
+
+    
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <span href="/">
+                    <a class='brand' href='http://www.intouchsms.co.rw'>IntouchSMS WEB API <span class="version">1.0</span></a>
+                </span>
+                <ul class="nav pull-right">
+                    
+                        
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Sansdefaut
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href='/api/api-auth/logout/?next=/api/sendsms/'>Log out</a></li>
+                                </ul>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <ul class="breadcrumb">
+        
+            <li>
+                <a href="/api/" >Api Root</a> <span class="divider">&rsaquo;</span>
+            </li>
+        
+            <li>
+                <a href="/api/sendsms/" class="active">Send Sms</a> 
+            </li>
+        
+    </ul>
+    
+
+    <!-- Content -->
+    <div id="content">
+
+        
+            <form id="get-form" class="pull-right">
+                <fieldset>
+                    <div class="btn-group format-selection">
+                        <a class="btn btn-primary js-tooltip" href='/api/sendsms/' rel="nofollow" title="Make a GET request on the Send Sms resource">GET</a>
+
+                        <button class="btn btn-primary dropdown-toggle js-tooltip" data-toggle="dropdown" title="Specify a format for the GET request">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            
+                                <li>
+                                    <a class="js-tooltip format-option" href='/api/sendsms/?format=api' rel="nofollow" title="Make a GET request on the Send Sms resource with the format set to `api`">api</a>
+                                </li>
+                            
+                                <li>
+                                    <a class="js-tooltip format-option" href='/api/sendsms/?format=json' rel="nofollow" title="Make a GET request on the Send Sms resource with the format set to `json`">json</a>
+                                </li>
+                            
+                                <li>
+                                    <a class="js-tooltip format-option" href='/api/sendsms/?format=xml' rel="nofollow" title="Make a GET request on the Send Sms resource with the format set to `xml`">xml</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+
+                </fieldset>
+            </form>
+        
+
+        
+            <form class="button-form" action="/api/sendsms/" method="POST" class="pull-right">
+                <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='DX8X4vFBHqsWyQzVNUcvZApd8egrbwZu' /></div>
+                <input type="hidden" name="_method" value="OPTIONS" />
+                <button class="btn btn-primary js-tooltip" title="Make an OPTIONS request on the Send Sms resource">OPTIONS</button>
+            </form>
+        
+
+        
+
+        <div class="content-main">
+            <div class="page-header"><h1>Send Sms</h1></div>
+            
+            
+            
+            <div class="request-info" style="clear: both" >
+                <pre class="prettyprint"><b>POST</b> /api/sendsms/</pre>
+            </div>
+            <div class="response-info">
+                <pre class="prettyprint"><div class="meta nocode"><b>HTTP 200 OK</b>
+<b>Vary:</b> <span class="lit">Accept</span>
+<b>Content-Type:</b> <span class="lit">text/html; charset=utf-8</span>
+<b>Allow:</b> <span class="lit">GET, POST, HEAD, OPTIONS</span>
+
+</div>{
+    &quot;response&quot;: [
+        {
+            &quot;errors&quot;: {
+                &quot;action&quot;: &quot;Failed to Send Message.&quot;, 
+                &quot;error&quot;: &quot;Invalid sender name&quot;
+            }
+        }
+    ], 
+    &quot;success&quot;: false
+}</pre>
+            </div>
+        </div>
+
+            
+
+                
+                <div >
+                    
+                    <div class="well tab-content">
+                        
+                        <div  id="generic-content-form">
+                            
+                            <form action="/api/sendsms/" method="POST" class="form-horizontal">
+                                <fieldset>
+                                    
+<div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='DX8X4vFBHqsWyQzVNUcvZApd8egrbwZu' /></div>
+
+
+    <div class="control-group">
+        <label for="id__content_type" class="control-label">Media type</label>
+        <div class="controls">
+            <select name="_content_type" id="id__content_type">
+<option value="application/json" selected="selected">application/json</option>
+<option value="*/xml">*/xml</option>
+</select>
+            <span class="help-block"></span>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label for="id__content" class="control-label">Content</label>
+        <div class="controls">
+            <textarea id="id__content" rows="10" cols="40" name="_content">{
+    &quot;recipients&quot;: &quot;&quot;, 
+    &quot;sender&quot;: &quot;&quot;, 
+    &quot;message&quot;: &quot;&quot;
+}</textarea>
+            <span class="help-block"></span>
+        </div>
+    </div>
+
+
+                                    <div class="form-actions">
+                                        <button class="btn btn-primary" title="Make a POST request on the Send Sms resource">POST</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+
+                
+            
+
+        </div>
+        <!-- END content-main -->
+
+    </div>
+    <!-- END Content -->
+
+        <div id="push"></div>
+
+    </div>
+
+    </div><!-- ./wrapper -->
+
+    
+    
+
+    
+    <script src="https://www.intouchsms.co.rw:9001/static/rest_framework/js/jquery-1.8.1-min.js"></script>
+    <script src="https://www.intouchsms.co.rw:9001/static/rest_framework/js/bootstrap.min.js"></script>
+    <script src="https://www.intouchsms.co.rw:9001/static/rest_framework/js/prettify-min.js"></script>
+    <script src="https://www.intouchsms.co.rw:9001/static/rest_framework/js/default.js"></script>
+    
+  </body>
+</html>
+
+2025-06-22 13:30:46 - SMS to 250789934421 - Result: 
+
+<!DOCTYPE html>
+<html>
+    <head>
+    
+
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="robots" content="NONE,NOARCHIVE" />
+        
+
+        <title>IntouchSMS WEB API</title>
+
+        
+        
+            <link rel="stylesheet" type="text/css" href="https://www.intouchsms.co.rw:9001/static/rest_framework/css/bootstrap.min.css"/>
+            <link rel="stylesheet" type="text/css" href="https://www.intouchsms.co.rw:9001/static/rest_framework/css/bootstrap-tweaks.css"/>
+        
+        <link rel="stylesheet" type="text/css" href="https://www.intouchsms.co.rw:9001/static/rest_framework/css/prettify.css"/>
+        <link rel="stylesheet" type="text/css" href="https://www.intouchsms.co.rw:9001/static/rest_framework/css/default.css"/>
+        
+
+    
+    </head>
+
+  <body class=" container">
+
+    <div class="wrapper">
+
+    
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <span href="/">
+                    <a class='brand' href='http://www.intouchsms.co.rw'>IntouchSMS WEB API <span class="version">1.0</span></a>
+                </span>
+                <ul class="nav pull-right">
+                    
+                        
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Sansdefaut
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href='/api/api-auth/logout/?next=/api/sendsms/'>Log out</a></li>
+                                </ul>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <ul class="breadcrumb">
+        
+            <li>
+                <a href="/api/" >Api Root</a> <span class="divider">&rsaquo;</span>
+            </li>
+        
+            <li>
+                <a href="/api/sendsms/" class="active">Send Sms</a> 
+            </li>
+        
+    </ul>
+    
+
+    <!-- Content -->
+    <div id="content">
+
+        
+            <form id="get-form" class="pull-right">
+                <fieldset>
+                    <div class="btn-group format-selection">
+                        <a class="btn btn-primary js-tooltip" href='/api/sendsms/' rel="nofollow" title="Make a GET request on the Send Sms resource">GET</a>
+
+                        <button class="btn btn-primary dropdown-toggle js-tooltip" data-toggle="dropdown" title="Specify a format for the GET request">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            
+                                <li>
+                                    <a class="js-tooltip format-option" href='/api/sendsms/?format=api' rel="nofollow" title="Make a GET request on the Send Sms resource with the format set to `api`">api</a>
+                                </li>
+                            
+                                <li>
+                                    <a class="js-tooltip format-option" href='/api/sendsms/?format=json' rel="nofollow" title="Make a GET request on the Send Sms resource with the format set to `json`">json</a>
+                                </li>
+                            
+                                <li>
+                                    <a class="js-tooltip format-option" href='/api/sendsms/?format=xml' rel="nofollow" title="Make a GET request on the Send Sms resource with the format set to `xml`">xml</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+
+                </fieldset>
+            </form>
+        
+
+        
+            <form class="button-form" action="/api/sendsms/" method="POST" class="pull-right">
+                <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='kN3VO9IQnFTjNnGkhNjse12K3KJN39kD' /></div>
+                <input type="hidden" name="_method" value="OPTIONS" />
+                <button class="btn btn-primary js-tooltip" title="Make an OPTIONS request on the Send Sms resource">OPTIONS</button>
+            </form>
+        
+
+        
+
+        <div class="content-main">
+            <div class="page-header"><h1>Send Sms</h1></div>
+            
+            
+            
+            <div class="request-info" style="clear: both" >
+                <pre class="prettyprint"><b>POST</b> /api/sendsms/</pre>
+            </div>
+            <div class="response-info">
+                <pre class="prettyprint"><div class="meta nocode"><b>HTTP 200 OK</b>
+<b>Vary:</b> <span class="lit">Accept</span>
+<b>Content-Type:</b> <span class="lit">text/html; charset=utf-8</span>
+<b>Allow:</b> <span class="lit">GET, POST, HEAD, OPTIONS</span>
+
+</div>{
+    &quot;response&quot;: [
+        {
+            &quot;errors&quot;: {
+                &quot;action&quot;: &quot;Failed to Send Message.&quot;, 
+                &quot;error&quot;: &quot;Invalid sender name&quot;
+            }
+        }
+    ], 
+    &quot;success&quot;: false
+}</pre>
+            </div>
+        </div>
+
+            
+
+                
+                <div >
+                    
+                    <div class="well tab-content">
+                        
+                        <div  id="generic-content-form">
+                            
+                            <form action="/api/sendsms/" method="POST" class="form-horizontal">
+                                <fieldset>
+                                    
+<div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='kN3VO9IQnFTjNnGkhNjse12K3KJN39kD' /></div>
+
+
+    <div class="control-group">
+        <label for="id__content_type" class="control-label">Media type</label>
+        <div class="controls">
+            <select name="_content_type" id="id__content_type">
+<option value="application/json" selected="selected">application/json</option>
+<option value="*/xml">*/xml</option>
+</select>
+            <span class="help-block"></span>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label for="id__content" class="control-label">Content</label>
+        <div class="controls">
+            <textarea id="id__content" rows="10" cols="40" name="_content">{
+    &quot;recipients&quot;: &quot;&quot;, 
+    &quot;sender&quot;: &quot;&quot;, 
+    &quot;message&quot;: &quot;&quot;
+}</textarea>
+            <span class="help-block"></span>
+        </div>
+    </div>
+
+
+                                    <div class="form-actions">
+                                        <button class="btn btn-primary" title="Make a POST request on the Send Sms resource">POST</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+
+                
+            
+
+        </div>
+        <!-- END content-main -->
+
+    </div>
+    <!-- END Content -->
+
+        <div id="push"></div>
+
+    </div>
+
+    </div><!-- ./wrapper -->
+
+    
+    
+
+    
+    <script src="https://www.intouchsms.co.rw:9001/static/rest_framework/js/jquery-1.8.1-min.js"></script>
+    <script src="https://www.intouchsms.co.rw:9001/static/rest_framework/js/bootstrap.min.js"></script>
+    <script src="https://www.intouchsms.co.rw:9001/static/rest_framework/js/prettify-min.js"></script>
+    <script src="https://www.intouchsms.co.rw:9001/static/rest_framework/js/default.js"></script>
+    
+  </body>
+</html>
+
+2025-06-22 13:34:03 - SMS to 250789934421 - Result: 
+
+<!DOCTYPE html>
+<html>
+    <head>
+    
+
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="robots" content="NONE,NOARCHIVE" />
+        
+
+        <title>IntouchSMS WEB API</title>
+
+        
+        
+            <link rel="stylesheet" type="text/css" href="https://www.intouchsms.co.rw:9001/static/rest_framework/css/bootstrap.min.css"/>
+            <link rel="stylesheet" type="text/css" href="https://www.intouchsms.co.rw:9001/static/rest_framework/css/bootstrap-tweaks.css"/>
+        
+        <link rel="stylesheet" type="text/css" href="https://www.intouchsms.co.rw:9001/static/rest_framework/css/prettify.css"/>
+        <link rel="stylesheet" type="text/css" href="https://www.intouchsms.co.rw:9001/static/rest_framework/css/default.css"/>
+        
+
+    
+    </head>
+
+  <body class=" container">
+
+    <div class="wrapper">
+
+    
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <span href="/">
+                    <a class='brand' href='http://www.intouchsms.co.rw'>IntouchSMS WEB API <span class="version">1.0</span></a>
+                </span>
+                <ul class="nav pull-right">
+                    
+                        
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Sansdefaut
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href='/api/api-auth/logout/?next=/api/sendsms/'>Log out</a></li>
+                                </ul>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <ul class="breadcrumb">
+        
+            <li>
+                <a href="/api/" >Api Root</a> <span class="divider">&rsaquo;</span>
+            </li>
+        
+            <li>
+                <a href="/api/sendsms/" class="active">Send Sms</a> 
+            </li>
+        
+    </ul>
+    
+
+    <!-- Content -->
+    <div id="content">
+
+        
+            <form id="get-form" class="pull-right">
+                <fieldset>
+                    <div class="btn-group format-selection">
+                        <a class="btn btn-primary js-tooltip" href='/api/sendsms/' rel="nofollow" title="Make a GET request on the Send Sms resource">GET</a>
+
+                        <button class="btn btn-primary dropdown-toggle js-tooltip" data-toggle="dropdown" title="Specify a format for the GET request">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            
+                                <li>
+                                    <a class="js-tooltip format-option" href='/api/sendsms/?format=api' rel="nofollow" title="Make a GET request on the Send Sms resource with the format set to `api`">api</a>
+                                </li>
+                            
+                                <li>
+                                    <a class="js-tooltip format-option" href='/api/sendsms/?format=json' rel="nofollow" title="Make a GET request on the Send Sms resource with the format set to `json`">json</a>
+                                </li>
+                            
+                                <li>
+                                    <a class="js-tooltip format-option" href='/api/sendsms/?format=xml' rel="nofollow" title="Make a GET request on the Send Sms resource with the format set to `xml`">xml</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+
+                </fieldset>
+            </form>
+        
+
+        
+            <form class="button-form" action="/api/sendsms/" method="POST" class="pull-right">
+                <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='AOMHVdaou9MLDmoAHLnUoM5HAUUR1jNd' /></div>
+                <input type="hidden" name="_method" value="OPTIONS" />
+                <button class="btn btn-primary js-tooltip" title="Make an OPTIONS request on the Send Sms resource">OPTIONS</button>
+            </form>
+        
+
+        
+
+        <div class="content-main">
+            <div class="page-header"><h1>Send Sms</h1></div>
+            
+            
+            
+            <div class="request-info" style="clear: both" >
+                <pre class="prettyprint"><b>POST</b> /api/sendsms/</pre>
+            </div>
+            <div class="response-info">
+                <pre class="prettyprint"><div class="meta nocode"><b>HTTP 200 OK</b>
+<b>Vary:</b> <span class="lit">Accept</span>
+<b>Content-Type:</b> <span class="lit">text/html; charset=utf-8</span>
+<b>Allow:</b> <span class="lit">GET, POST, HEAD, OPTIONS</span>
+
+</div>{
+    &quot;response&quot;: [
+        {
+            &quot;errors&quot;: {
+                &quot;action&quot;: &quot;Failed to Send Message.&quot;, 
+                &quot;error&quot;: &quot;Invalid sender name&quot;
+            }
+        }
+    ], 
+    &quot;success&quot;: false
+}</pre>
+            </div>
+        </div>
+
+            
+
+                
+                <div >
+                    
+                    <div class="well tab-content">
+                        
+                        <div  id="generic-content-form">
+                            
+                            <form action="/api/sendsms/" method="POST" class="form-horizontal">
+                                <fieldset>
+                                    
+<div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='AOMHVdaou9MLDmoAHLnUoM5HAUUR1jNd' /></div>
+
+
+    <div class="control-group">
+        <label for="id__content_type" class="control-label">Media type</label>
+        <div class="controls">
+            <select name="_content_type" id="id__content_type">
+<option value="application/json" selected="selected">application/json</option>
+<option value="*/xml">*/xml</option>
+</select>
+            <span class="help-block"></span>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label for="id__content" class="control-label">Content</label>
+        <div class="controls">
+            <textarea id="id__content" rows="10" cols="40" name="_content">{
+    &quot;recipients&quot;: &quot;&quot;, 
+    &quot;sender&quot;: &quot;&quot;, 
+    &quot;message&quot;: &quot;&quot;
+}</textarea>
+            <span class="help-block"></span>
+        </div>
+    </div>
+
+
+                                    <div class="form-actions">
+                                        <button class="btn btn-primary" title="Make a POST request on the Send Sms resource">POST</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+
+                
+            
+
+        </div>
+        <!-- END content-main -->
+
+    </div>
+    <!-- END Content -->
+
+        <div id="push"></div>
+
+    </div>
+
+    </div><!-- ./wrapper -->
+
+    
+    
+
+    
+    <script src="https://www.intouchsms.co.rw:9001/static/rest_framework/js/jquery-1.8.1-min.js"></script>
+    <script src="https://www.intouchsms.co.rw:9001/static/rest_framework/js/bootstrap.min.js"></script>
+    <script src="https://www.intouchsms.co.rw:9001/static/rest_framework/js/prettify-min.js"></script>
+    <script src="https://www.intouchsms.co.rw:9001/static/rest_framework/js/default.js"></script>
+    
+  </body>
+</html>
+
